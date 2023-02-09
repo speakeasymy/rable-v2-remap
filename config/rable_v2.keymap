@@ -17,25 +17,41 @@
 
         default_layer {
             bindings = <
- &kp F1  &gresc  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp MINUS  &kp EQUAL  &kp BACKSPACE  &kp BACKSPACE  &kp HOME  &kp F2  &kp TAB   &kp Q   &kp W   &kp E   &kp R   &kp T   &kp Y   &kp U   &kp I   &kp O   &kp P  &kp LBKT  &kp RBKT  &kp BACKSLASH  &kp PG_UP  &kp F3  &kp CLCK   &kp A   &kp S   &kp D   &kp F   &kp G   &kp H   &kp J   &kp K   &kp L  &kp SEMI  &kp SQT  &kp RET  &kp PG_DN  &kp F4  &kp LSHFT  &kp LSHFT   &kp Z   &kp X   &kp C   &kp V   &kp B   &kp N   &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT  &kp UP  &kp END  &kp F5  &kp LCTRL  &kp LGUI  &kp LALT  &kp SPACE  &kp LGUI   &mo 2  &kp LEFT  &kp DOWN  &kp RIGHT
+&kp F1    &kp ESC     &kp N1              &kp N2       &kp N3  &kp N4    &kp N5  &kp N6     &kp N7     &kp N8     &kp N9    &kp N0  &kp MINUS        &kp EQUAL  &kp BACKSLASH  &kp GRAVE  &kp HOME
+&kp F2    &kp TAB      &kp Q               &kp W        &kp F   &kp P     &kp G   &kp J      &kp L      &kp U      &kp Y  &kp SEMI   &kp LBKT         &kp RBKT  &kp BACKSPACE  &kp PG_UP
+&kp F3  &kp LCTRL      &kp A               &kp R        &kp S   &kp T     &kp D   &kp H      &kp N      &kp E      &kp I     &kp O    &kp SQT  &mt RSHFT ENTER      &kp PG_DN
+&kp F4  &kp LSHFT  &kp LSHFT               &kp Z        &kp X   &kp C     &kp V   &kp B      &kp K      &kp M  &kp COMMA   &kp DOT   &kp FSLH            &mo 3         &tog 1    &kp END
+&kp F5   &kp CAPS   &kp LGUI  &mt LEFT_ALT SPACE  &lt 3 SPACE  &trans  &kp RGUI   &mo 2  &kp RCTRL  &kp RIGHT
             >;
         };
 
-        arrow_layer {
+        qwerty_layer {
             bindings = <
- &trans  &kp GRAVE  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp UP  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp F1    &kp ESC     &kp N1          &kp N2        &kp N3  &kp N4    &kp N5  &kp N6     &kp N7     &kp N8     &kp N9    &kp N0         &kp MINUS  &kp EQUAL  &kp BACKSLASH  &kp GRAVE  &kp HOME
+&kp F2    &kp TAB      &kp Q           &kp W         &kp E   &kp R     &kp T   &kp Y      &kp U      &kp I      &kp O     &kp P          &kp LBKT   &kp RBKT  &kp BACKSPACE  &kp PG_UP
+&kp F3  &kp LCTRL      &kp A           &kp S         &kp D   &kp F     &kp G   &kp H      &kp J      &kp K      &kp L  &kp SEMI  &kp SINGLE_QUOTE  &kp ENTER      &kp PG_DN
+&kp F4  &kp LSHFT  &kp LSHFT           &kp Z         &kp X   &kp C     &kp V   &kp B      &kp N      &kp M  &kp COMMA   &kp DOT         &kp SLASH  &kp RSHFT          &to 0    &kp END
+&kp F5   &kp CAPS   &kp LGUI  &mt LALT SPACE  &lt 3 ESCAPE  &trans  &kp RGUI   &mo 2  &kp RCTRL  &kp RIGHT
             >;
         };
 
-        mod_layer {
+        bt_layer {
             bindings = <
- &trans  &reset  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &trans  &trans  &trans  &trans  &trans  &trans  &ext_power EP_OFF  &ext_power EP_ON  &bt BT_CLR  &bt BT_CLR  &trans  &bt BT_SEL 0  &bootloader  &trans  &trans  &trans  &trans  &out OUT_TOG  &trans  &out OUT_USB  &trans  &trans  &trans  &trans  &trans  &tog 3  &trans  &bt BT_SEL 1  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &rgb_ug RGB_TOG  &trans  &bt BT_SEL 2  &trans  &trans  &trans  &trans  &bt BT_CLR  &trans  &out OUT_BLE  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &bt BT_SEL 3  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+      &trans       &reset  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3        &trans        &trans        &trans  &trans  &trans  &trans  &ext_power EP_OFF  &ext_power EP_ON  &bt BT_CLR  &bt BT_CLR  &trans
+&bt BT_SEL 0  &bootloader        &trans        &trans        &trans        &trans  &out OUT_TOG        &trans  &out OUT_USB  &trans  &trans  &trans             &trans            &trans      &trans      &trans
+&bt BT_SEL 1       &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans             &trans   &rgb_ug RGB_TOG      &trans
+&bt BT_SEL 2       &trans        &trans        &trans        &trans    &bt BT_CLR        &trans  &out OUT_BLE        &trans  &trans  &trans  &trans             &trans            &trans      &trans      &trans
+&bt BT_SEL 3       &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans  &trans
             >;
         };
 
-        lock_layer {
+        nav_layer {
             bindings = <
-  &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none  &trans   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none  &trans   &none   &none   &none   &none   &none   &none  &trans   &none   &none   &none   &none
+&none      &kp ESC             &kp F1        &kp F2           &kp F3         &kp F4    &kp F5     &kp F6    &kp F7    &kp F8     &kp F9    &kp F10             &kp F11               &kp F12  &kp F20  &kp INS  &none
+&none  &bootloader    &kp C_VOLUME_UP  &kp C_BRI_UP            &none          &none     &none      &none   &kp DEL     &none      &none      &none               &none                 &none  &kp DEL    &none
+&none        &none  &kp C_VOLUME_DOWN  &kp C_BRI_DN            &none          &none  &kp HOME  &kp PG_UP    &kp UP    &kp UP      &none      &none               &none             &kp ENTER    &none
+&none        &none              &none    &kp C_MUTE  &kp PRINTSCREEN  &kp C_AL_CALC   &kp END  &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp RIGHT  &kp C_AC_SCROLL_UP  &kp C_AC_SCROLL_DOWN   &reset    &none
+&none        &none              &none         &none            &none         &trans     &none      &none     &none     &none
             >;
         };
     };
