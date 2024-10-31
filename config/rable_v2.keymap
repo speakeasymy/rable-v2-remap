@@ -5,9 +5,8 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/ext_power.h>
+#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/rgb.h>
 
@@ -17,41 +16,41 @@
 
         default_layer {
             bindings = <
-&kp F1    &kp ESC     &kp N1              &kp N2       &kp N3  &kp N4    &kp N5  &kp N6     &kp N7     &kp N8     &kp N9    &kp N0  &kp MINUS        &kp EQUAL  &kp BACKSLASH  &kp GRAVE  &kp HOME
-&kp F2    &kp TAB      &kp Q               &kp W        &kp F   &kp P     &kp G   &kp J      &kp L      &kp U      &kp Y  &kp SEMI   &kp LBKT         &kp RBKT  &kp BACKSPACE  &kp PG_UP
-&kp F3  &kp LCTRL      &kp A               &kp R        &kp S   &kp T     &kp D   &kp H      &kp N      &kp E      &kp I     &kp O    &kp SQT  &mt RSHFT ENTER      &kp PG_DN
-&kp F4  &kp LSHFT  &kp LSHFT               &kp Z        &kp X   &kp C     &kp V   &kp B      &kp K      &kp M  &kp COMMA   &kp DOT   &kp FSLH            &mo 2         &tog 1    &kp END
-&kp F5   &kp CAPS   &kp LGUI  &mt LEFT_ALT SPACE  &lt 3 SPACE  &trans  &kp RGUI   &mo 2  &kp RCTRL  &kp RIGHT
-            >;
-        };
-
-        qwerty_layer {
-            bindings = <
-&kp F1     &kp ESC     &kp N1          &kp N2       &kp N3  &kp N4    &kp N5  &kp N6     &kp N7     &kp N8     &kp N9    &kp N0         &kp MINUS  &kp EQUAL  &kp BACKSLASH  &kp GRAVE  &kp HOME
-&kp F2     &kp TAB      &kp Q           &kp W        &kp E   &kp R     &kp T   &kp Y      &kp U      &kp I      &kp O     &kp P          &kp LBKT   &kp RBKT  &kp BACKSPACE  &kp PG_UP
-&kp F3   &kp LCTRL      &kp A           &kp S        &kp D   &kp F     &kp G   &kp H      &kp J      &kp K      &kp L  &kp SEMI  &kp SINGLE_QUOTE  &kp ENTER      &kp PG_DN
-&kp F4   &kp LSHFT  &kp LSHFT           &kp Z        &kp X   &kp C     &kp V   &kp B      &kp N      &kp M  &kp COMMA   &kp DOT         &kp SLASH      &mo 3          &to 0    &kp END
-&kp F5  &lt 2 CAPS   &kp LGUI  &mt LALT SPACE  &lt 3 SPACE  &trans  &kp RGUI   &mo 2  &kp RCTRL  &kp RIGHT
-            >;
-        };
-
-        bt_layer {
-            bindings = <
-      &trans       &reset  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3        &trans        &trans        &trans  &trans  &trans  &trans  &ext_power EP_OFF  &ext_power EP_ON  &bt BT_CLR  &bt BT_CLR  &trans
-&bt BT_SEL 0  &bootloader        &trans        &trans        &trans        &trans  &out OUT_TOG        &trans  &out OUT_USB  &trans  &trans  &trans             &trans            &trans      &trans      &trans
-&bt BT_SEL 1       &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans             &trans   &rgb_ug RGB_TOG      &trans
-&bt BT_SEL 2       &trans        &trans        &trans        &trans    &bt BT_CLR        &trans  &out OUT_BLE        &trans  &trans  &trans  &trans             &trans            &trans      &trans      &trans
-&bt BT_SEL 3       &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans  &trans
+&kp F1  &kp ESC    &kp N1       &kp N2              &kp N3       &kp N4       &kp N5  &kp N6   &kp N7       &kp N8       &kp N9       &kp N0       &kp MINUS      &kp EQUAL        &kp BACKSLASH  &kp GRAVE  &kp HOME
+&kp F2  &kp TAB    &kp Q        &kp W               &kp F        &kp P        &kp G   &kp J    &kp L        &kp U        &kp Y        &kp SQT      &kp LBKT       &kp RBKT         &kp BACKSPACE  &kp PG_UP
+&kp F3  &kp LCTRL  &mt LG(A) A  &mt LA(R) R         &mt LC(S) S  &mt LS(T) T  &kp D   &kp H    &mt RS(N) N  &mt RC(E) E  &mt RA(I) I  &mt RG(O) O  &kp BACKSPACE  &mt RSHFT ENTER  &kp PG_DN
+&kp F4  &kp LSHFT  &kp LSHFT    &kp Z               &kp X        &kp C        &kp V   &kp B    &kp K        &kp M        &kp COMMA    &kp DOT      &kp FSLH       &lt 2 SEMI       &tog 3         &kp END
+&kp F5  &kp CAPS   &trans       &mt LEFT_ALT SPACE  &lt 1 SPACE  &mo 2        &trans  &kp DEL  &kp DELETE   &kp RIGHT
             >;
         };
 
         fnav_layer {
             bindings = <
-&none      &kp ESC             &kp F1        &kp F2           &kp F3         &kp F4    &kp F5     &kp F6    &kp F7    &kp F8     &kp F9    &kp F10             &kp F11               &kp F12  &kp F20  &kp INS  &none
-&none  &bootloader    &kp C_VOLUME_UP  &kp C_BRI_UP            &none          &none     &none      &none   &kp DEL     &none      &none      &none               &none                 &none  &kp DEL    &none
-&none        &none  &kp C_VOLUME_DOWN  &kp C_BRI_DN            &none          &none  &kp HOME  &kp PG_UP    &kp UP    &kp UP      &none      &none               &none             &kp ENTER    &none
-&none        &none              &none    &kp C_MUTE  &kp PRINTSCREEN  &kp C_AL_CALC   &kp END  &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp RIGHT  &kp C_AC_SCROLL_UP  &kp C_AC_SCROLL_DOWN   &reset    &none
-&none        &none              &none         &none            &none         &trans     &none      &none     &none     &none
+&none  &trans       &kp F1  &kp F2    &kp F3          &kp F4         &kp F5  &kp F6   &kp F7        &kp F8          &kp F9        &kp F10          &kp F11  &kp F12    &kp F20  &kp INS  &none
+&none  &bootloader  &none   &none     &kp UP          &none          &none   &none    &out OUT_USB  &none           &none         &kp PRINTSCREEN  &none    &none      &kp DEL  &none
+&none  &none        &none   &kp LEFT  &kp DOWN_ARROW  &kp RIGHT      &none   &none    &kp LEFT      &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT        &none    &kp ENTER  &none
+&none  &none        &none   &none     &none           &kp C_AL_CALC  &none   &kp INS  &kp HOME      &kp PAGE_DOWN   &kp PG_UP     &kp END          &none    &none      &reset   &none
+&none  &none        &none   &none     &none           &trans         &none   &none    &none         &none
+            >;
+        };
+
+        bt_layer {
+            bindings = <
+&bt BT_CLR_ALL  &trans       &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &trans  &trans                &trans             &trans        &trans  &trans           &trans  &trans           &bt BT_CLR  &bt BT_CLR  &trans
+&bt BT_SEL 0    &bootloader  &trans          &trans        &trans        &trans        &trans  &kp C_BRIGHTNESS_INC  &kp C_VOLUME_UP    &out OUT_USB  &trans  &kp PRINTSCREEN  &trans  &trans           &trans      &trans
+&bt BT_SEL 1    &trans       &bt BT_CLR_ALL  &trans        &trans        &trans        &trans  &kp C_BRI_DEC         &kp C_VOLUME_DOWN  &trans        &trans  &trans           &trans  &rgb_ug RGB_TOG  &trans
+&bt BT_SEL 2    &trans       &trans          &trans        &trans        &bt BT_CLR    &trans  &out OUT_BLE          &trans             &kp C_MUTE    &trans  &trans           &trans  &trans           &trans      &trans
+&bt BT_SEL 3    &trans       &trans          &trans        &trans        &trans        &trans  &trans                &trans             &trans
+            >;
+        };
+
+        qwerty_layer {
+            bindings = <
+&kp F1  &kp ESC    &kp N1     &kp N2    &kp N3       &kp N4  &kp N5  &kp N6   &kp N7      &kp N8     &kp N9     &kp N0    &kp MINUS         &kp EQUAL  &kp BACKSLASH  &kp GRAVE  &kp HOME
+&kp F2  &kp TAB    &kp Q      &kp W     &kp E        &kp R   &kp T   &kp Y    &kp U       &kp I      &kp O      &kp P     &kp LBKT          &kp RBKT   &kp BACKSPACE  &kp PG_UP
+&kp F3  &kp LCTRL  &kp A      &kp S     &kp D        &kp F   &kp G   &kp H    &kp J       &kp K      &kp L      &kp SEMI  &kp SINGLE_QUOTE  &kp ENTER  &kp PG_DN
+&kp F4  &kp LSHFT  &kp LSHFT  &kp Z     &kp X        &kp C   &kp V   &kp B    &kp N       &kp M      &kp COMMA  &kp DOT   &kp SLASH         &mo 2      &to 0          &kp END
+&kp F5  &kp CAPS   &trans     &kp LALT  &lt 1 SPACE  &mo 2   &trans  &kp DEL  &kp DELETE  &kp RIGHT
             >;
         };
     };
